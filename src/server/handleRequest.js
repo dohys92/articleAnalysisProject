@@ -2,13 +2,13 @@ require('dotenv').config()
 function validateRequest(req, res, next) {
     if(!req.body.text) {
         return res.status(400).json({
-           message: 'Invalid input'
+           message: 'Invalid URL'
         })
     }
     return next();
 }
 
-function registerPostHandler(req, res) {
+function registerPostHandler(req, res, next) {
     var aylien = require("aylien_textapi");
     var textapi = new aylien({
         application_id: process.env.APP_ID,
