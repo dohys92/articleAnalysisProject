@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <link rel="stylesheet" href="/styles/resets.scss">
+        <link rel="stylesheet" href="/styles/base.scss">
+        <link rel="stylesheet" href="/styles/header.scss">
+        <link rel="stylesheet" href="/styles/form.scss">
+        <link rel="stylesheet" href="/styles/footer.scss">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="title">
+                Text Analysis Master
+            </div>
+            <div class="instruction">
+                Enter the url of the article you want to analyze.<br> We'll analyze it in seconds, Like a Pro.
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="inputForm" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="Enter the URL here">
+                    <input id="button" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+            <section class="output">
+                <strong>Form Results:</strong>
+                <div id="results"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>YSD</p>
+        </footer>
+
+    </body>
+</html>
