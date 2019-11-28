@@ -14,6 +14,7 @@ app.use(cors())
 app.use(express.static('dist'))
 
 const requestPost = require('./handleRequest.js')
+var aylien = require("aylien_textapi");
 
 
 

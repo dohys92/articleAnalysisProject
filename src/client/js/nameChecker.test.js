@@ -1,6 +1,6 @@
-const nameChecker = require('/nameChecker')
+import { checkForName } from '/nameChecker'
 
-test('properly checks the name', ()=> {
-	expect(global.alert).toHaveBeenCalledTimes(1);
+test('function exists', async()=> {
+	expect(checkForName).toBeDefined();
 })
 

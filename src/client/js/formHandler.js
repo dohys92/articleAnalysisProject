@@ -1,7 +1,7 @@
 function handleSubmit(event) {
     event.preventDefault();
-    // check what text was put into the form field
     let url = document.querySelector('#name').value;
+    console.log(url)
     if(Client.checkUrl(url)) {
         console.log("::: Form Submitted :::");
         console.log("::: Request Info  :::");
@@ -15,13 +15,13 @@ function handleSubmit(event) {
         })
         .then(function(res) {
             console.log(res)
-            document.getElementById('results').innerHTML = res.text;
+            document.getElementById('results').innerHTML = res.polarity;
         })
-    } else{
+    } 
+    else {
         console.log("error in handleSubmit()");
         
     } 
 }
 
-// modules.exports(handleSubmit)
 export { handleSubmit }
