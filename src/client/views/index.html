@@ -24,15 +24,16 @@
         <main>
             <section>
                 <form class="inputForm" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="userInput" value="" placeholder="Enter the URL here">
+                    <input id="name" type="url" name="input-url" placeholder="Enter the URL here">
                     <input id="button" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
             <section class="output">
-                <strong>Form Results:</strong>
+                <strong>Form Results: </strong>
                 <div id="results"></div>
             </section>
+
         </main>
 
         <footer class="footer">

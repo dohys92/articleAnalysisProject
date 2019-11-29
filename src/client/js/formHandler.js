@@ -9,13 +9,14 @@ function handleSubmit(event) {
             method: 'POST',
             mode: 'cors',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({ text: url })
         })
-        .then(function(res) {
-            console.log(res)
-            document.getElementById('results').innerHTML = res.polarity;
+        .then(function(response) {
+            console.log(response)
+            document.querySelector('#results').innerHTML = response;
+            
         })
     } 
     else {
@@ -25,3 +26,6 @@ function handleSubmit(event) {
 }
 
 export { handleSubmit }
+
+
+
