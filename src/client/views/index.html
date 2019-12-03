@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.scss">
-        <link rel="stylesheet" href="/styles/base.scss">
-        <link rel="stylesheet" href="/styles/header.scss">
-        <link rel="stylesheet" href="/styles/form.scss">
-        <link rel="stylesheet" href="/styles/footer.scss">
+        <link type="scss" rel="stylesheet" href="/styles/resets.scss">
+        <link type="scss" rel="stylesheet" href="/styles/base.scss">
+        <link type="scss" rel="stylesheet" href="/styles/header.scss">
+        <link type="scss" rel="stylesheet" href="/styles/form.scss">
+        <link type="scss" rel="stylesheet" href="/styles/footer.scss">
     </head>
 
     <body>
@@ -30,14 +30,25 @@
             <section>
 
             <section class="output">
-                <strong>Form Results: </strong>
-                <div id="results"></div>
+                <h1 class="result-title">::::: ANALYSIS RESULTS ::::: </h1>
+                <div id="results">
+                    <h1 class="result">Polarity:</h1>
+                    <div class="result-block" id="polarity"></div>
+                    <h1 class="result">Subjectivity:</h1>
+                    <div class="result-block" id="subjectivity"></div>
+                    <h1 class="result">Polarity Confidence:</h1>
+                    <div class="result-block" id="polarity-confidence"></div>
+                    <h1 class="result">Subjectivity Confidence:</h1>
+                    <div class="result-block" id="subjectivity-confidence"></div>
+                    <p class="result"> Article Text: </p>
+                    <div class="result-block" id="article-text"></div>
+                </div>
             </section>
 
         </main>
 
         <footer class="footer">
-            <p>YSD</p>
+            <p>NLP Project 2019</p>
         </footer>
 
     </body>

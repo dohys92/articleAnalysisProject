@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors())
 app.use(express.static('dist'))
 
-const requestPost = require('./handleRequest')
+var requestPost = require('./handleRequest')
 var aylien = require("aylien_textapi");
 
 var textapi = new aylien({
@@ -32,13 +32,26 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve('dist/index.html'))
 })
 
-app.get('/test', function (req, res) {
-    res.json(mockAPIResponse);
+// app.get('/test', function (req, res) {
+//     res.json(mockAPIResponse);
 
+// })
+
+// app.post('/article', requestPost.validateRequest, requestPost.registerPostHandler);
+
+app.post('/article', (req,res)=> {
+    textapi.sentiment({
+        'url': req.body.text
+    }, function(error, response){
+        if(error===null) {
+            console.log(":: USER INPUT URL ANALYSIS ::")
+            console.log(response);
+            res.send(response);
+        } else {
+        console.log(error)
+    }
+    })
 })
-
-app.post('/article', requestPost.validateRequest, requestPost.registerPostHandler;
-
 // test if api works
 textapi.sentiment({
       'url': 'https://techcrunch.com/2019/11/26/disney-adds-continue-watching-feature/'
